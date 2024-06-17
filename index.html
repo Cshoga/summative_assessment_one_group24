@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="company_logo.png" alt="Company Logo">
+        <h1>Job Application Form</h1>
+        <form id="applicationForm" action="#" method="post">
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <small>Format: 123-456-7890</small>
+            </div>
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile URL *</label>
+                <input type="url" id="linkedin" name="linkedin" pattern="https:\/\/www\.linkedin\.com\/.*" required>
+                <small>Format: https://www.linkedin.com/username</small>
+            </div>
+            <div class="form-group">
+                <label for="coverLetter">Cover Letter *</label>
+                <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
+                <small>No special characters allowed</small>
+            </div>
+            <div class="form-group">
+                <label for="expectedSalary">Expected Salary *</label>
+                <input type="text" id="expectedSalary" name="expectedSalary" pattern="^\d+(\.\d{1,2})?$" required>
+                <small>Format: 1000.00</small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="errorMessages"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
